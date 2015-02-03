@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- model.domain.People people = new model.domain.People();-->
+	<bean id="people" class="model.domain.People"/>
+	
+	
+	<!-- model.domain.People p2 = new model.domain.People();
+		   p2.setId("영석");
+	 -->
+	<bean id="p2" class="model.domain.People">
+		<property name="id" value="영석"/>
+	</bean>
+	
+	
+	<!-- model.domain.People p3 = new model.domain.People("보라");		
+	 -->
+	<bean id="p3" class="model.domain.People">
+		<constructor-arg type="String" value="보라"/>
+	</bean>
+	
+</beans>
+
+
+

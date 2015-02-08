@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>index.html</title>
+</head>
+<body>
+	<h2>Spring MVC 학습</h2>
+	<br><hr><br>
+	
+	1. get방식 요청 test : <a href="A.do">get방식 요청 & forward 이동</a>
+	<br> A.do -> welcome.jsp로 page이동<br><br>
+	
+	2. get + query String 포함 : 방식 요청 test : 
+			<a href="B.do?name=master">get방식 요청  & forward 이동 </a>
+	<br> B.do -> welcome2.jsp로 page이동<br><br>
+	
+	
+	3. get + query String 포함 : 방식 요청 test : 
+			<a href="C.do?name=master">get방식 요청 & redirect 이동</a>
+	<br> C.do -> welcome3.jsp로 page이동<br><br>
+	
+	
+	<br><hr><br>
+	4. post방식 요청 test<br>
+	입력하는 데이터를 요청 객체에 저장해서 welcome4.jsp에서 출력<br>
+	<form action="D.do" method="post">
+		id : <input type="text" name="id"><br>
+		pw : <input type="password" name="pw"><br>
+		<input type="submit" value="로그인"><br>
+	</form>
+	
+	
+	
+	<br><hr><br>
+	5. post방식 요청 test<br>
+	입력하는 데이터를 People DTO객체로 생성해서 요청 객체에 저장후 welcome5.jsp에서 출력<br>
+	<form action="E.do" method="post">
+		id : <input type="text" name="id"><br>
+		pw : <input type="password" name="pw"><br>
+		<input type="submit" value="로그인"><br>
+	</form>
+	
+	<br><hr><br>
+	6. <a href="F.do">예외 처리 학습 </a>
+	
+	
+	<br><hr><br>
+	7. <a href="G.do?id=master">spring으로 세션 생성 및 활용 문법 습득하기 </a>
+	
+	<br><hr><br>
+	8. <a href="H.do?kodb=one&key=two&key2=three">spring으로 세션 생성 및 활용 문법 습득하기 </a>
+	
+	<br><hr><br>
+	9. <a href="responseBody.jsp">sun Controller가 직접 응답</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

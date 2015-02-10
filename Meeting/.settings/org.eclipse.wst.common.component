@@ -2,7 +2,6 @@
     <wb-module deploy-name="Meeting">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="context-root" value="Meeting"/>
         <property name="java-output-path" value="/Meeting/target/classes"/>
     </wb-module>

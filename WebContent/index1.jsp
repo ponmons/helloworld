@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -376,7 +378,7 @@
 	                  	  <div class="content-panel">
 	                  	  	  <h4><i class="fa fa-angle-right"></i>친구 리스트</h4>
 	                  	  	  <hr>
-		                <table id="listTable" class="table table-striped table-advance table-hover" >
+		                <table class="table table-striped table-advance table-hover" >
 	                  	  	 <thead>
                               <tr>
                                   <th><i class="fa fa-bullhorn"></i> 번호</th>
@@ -386,7 +388,8 @@
                                   <th><i class=" fa fa-edit"></i> 삭제</th>
                               </tr>
                               </thead>
-                              <tbody >
+                              <tbody id="listTable">
+                            
                               <tr>
                                   <td>
                                       <a href="basic_table.html#">

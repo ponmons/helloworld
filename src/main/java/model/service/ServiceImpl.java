@@ -10,7 +10,6 @@ import model.dao.memberDAO;
 import model.domain.memberDTO;
 
 
-
 @Service("memService")
 public class ServiceImpl implements SService {
 

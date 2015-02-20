@@ -1,4 +1,5 @@
 var httpRequest = null;//자바스크립트 요청 객체, 전역변수로 선언 필수 
+		var name = null;
 		 
 function getXMLHttpRequest() {
 				if (window.ActiveXObject) {//ms ie용 객체 생성 코드블록
@@ -37,11 +38,10 @@ function getData() {
 
 				$(data.list).each(
 						function(index, item) {
-							table += "<tr><td><a href='basic_table.html#'>"+ item.memno + "</a></td>" +
-									"<td><a href='basic_table.html#'>"+ item.memname + "</a></td>" +
-									"<td>" + item.memid + "</td>";
-							table += "<td>" + item.account + "</td>" +
-									"<td>" + item.phonenumber + "</td></tr>";
+							table += "<tr><td>" + item.memno + "</td><td>"
+									+ item.memname + "</td><td>" + item.memid + "</td>";
+							table += "<td>" + item.account + "</td><td>" + item.phonenumber + "</td><td>";
+							table += "<input type='button' value='삭제' id='del' name='"+item.memno+"'></td></tr>";
 						});
 				//테이블에 추가
 				$("#listTable tr:eq(0)").after(table);
@@ -56,48 +56,16 @@ $(document).ready(function() {
 /*	$("#btn").click(function() {
 		sendRequest();
 	
-	});//end of 회비추가 팝업창 */
+	});//end of 가입로직*/
 
-	$('input:radio[name=optionsRadios]').change(function(){
-		if($('input:radio[name=optionsRadios]:checked').val() == 'option1'){
-			$("input:text[id=op1]").removeAttr("disabled", "disabled");
-			$("input:text[id=op2]").attr("disabled", "disabled");
-		}else{
-			$("input:text[id=op2]").removeAttr("disabled", "disabled");
-			$("input:text[id=op1]").attr("disabled", "disabled");
-		}
-	});
-	// 회비를 나누는 방식 한사람당 회비 , 사람 수
-	$("#op1").blur(function(){
-		$("input:text[id=op2]").val($("input:text[id=op1]").val()*4); 
-	});
-	$("#op2").blur(function(){
-		$("input:text[id=op1]").val($("input:text[id=op2]").val()/4); 
-	});
-	
+	if($('input:radio[name=optionsRadios]').val() == "option2"){
+	alert(" 선택 하셨습니다."+$('input:radio[name=optionsRadios]:checked').val() +" "	+$("input:text[name=input1]").val());
+	$("input:radio[name=optionsRadios]").removeAttr("checked");
+	}
 	
 	getData();
 });
 
-
-// onlyNumber 이거는 숫자만 텍스트필드에 들어가
-function onlyNumber(event){
-    event = event || window.event;
-    var keyID = (event.which) ? event.which : event.keyCode;
-    if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
-        return;
-    else
-        return false;
-}
-//문자는 제거 해주는 역할 
-function removeChar(event) {
-    event = event || window.event;
-    var keyID = (event.which) ? event.which : event.keyCode;
-    if ( keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
-        return;
-    else
-        event.target.value = event.target.value.replace(/[^0-9]/g, "");
-}
 
 function viewData(){         
     if(httpRequest.readyState == 4){ //응답 완료 검증 조건식

@@ -304,7 +304,8 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
 					<h4 class="modal-title" id="myModalLabel">회비 추가</h4>
 				</div>
 				<div class="modal-body">
@@ -325,25 +326,33 @@
 										
 										<div class="col-sm-10">
 										
-											<div class="radio" align="center">
+											<div class="radio">
 												<input type="radio" name="optionsRadios" id="optionsRadios1"	value="option1" checked>
-												 한 사람당 회비 : <input id="op1" type="text"  onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'> 원
-												
+												 <label>한 사람당 회비 : <input id="op1" type="text" name="input1"> 원
+												</label>
 											</div>
-											<div class="radio" align="center">
+											<div class="radio">
 												<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-												 총 회비 : <input	id="op2" type="text"  onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' disabled>원
+												 <label>총 회비 : <input	id="op2" type="text" name="input1">원
+												</label>
 											</div>
 											
 											<span class="help-block">한 사람당 회비 방식과 총 회비 방식</span>
 										</div>
 										
 									</div>
-								
+									<div class="form-group">
+										<label class="col-sm-2 col-sm-2 control-label">Disabled</label>
+										<div class="col-sm-10">
+											<input class="form-control" id="disabledInput" type="text"
+												placeholder="Disabled input here..." disabled>
+										</div>
+									</div>
 									<div class="form-group">
 										<label class="col-sm-2 col-sm-2 control-label">받을 계좌 </label>
 										<div class="col-sm-10">
-											<input type="text" class="form-control" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'	placeholder="계좌를 입력하여 주세요.">
+											<input type="text" class="form-control"
+												placeholder="계좌를 입력하여 주세요.">
 										</div>
 									</div>
 								</form>
@@ -378,7 +387,62 @@
                               </tr>
                               </thead>
                               <tbody >
-                          
+                              <tr>
+                                  <td>
+                                      <a href="basic_table.html#">
+                                          Dashgum co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>17900.00$ </td>
+                                  <td><span class="label label-warning label-mini">Due</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="basic_table.html#">
+                                          Another Co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>14400.00$ </td>
+                                  <td><span class="label label-success label-mini">Paid</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="basic_table.html#">
+                                          Dashgum ext
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>22000.50$ </td>
+                                  <td><span class="label label-success label-mini">Paid</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><a href="basic_table.html#">Total Ltd</a></td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>12120.00$ </td>
+                                  <td><span class="label label-warning label-mini">Due</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
                               </tbody>
                           </table>
 	                  	  </div><!--/content-panel -->
@@ -405,23 +469,6 @@
       *********************************************************************************************************************************************************** -->                 
                  
                   <div class="col-lg-3 ds">
-                      <!-- USERS ONLINE SECTION -->
-						<h3>받을 사람</h3>
-                      <!-- First Member -->
-                   		<!-- PROFILE 02 PANEL -->
-							<div class="content-panel pn">
-								<div id="profile-02">
-									<div class="user">
-										<img src="assets/img/friends/fr-06.jpg" class="img-circle" width="80">
-										<h4>DJ SHERMAN</h4>
-									</div>
-								</div>
-								<div class="pr2-social centered">
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-								</div>
-							</div><!--/panel -->
                     <!--COMPLETED ACTIONS DONUTS CHART-->
 						<h3>NOTIFICATIONS</h3>
                                        
@@ -481,7 +528,78 @@
                       	</div>
                       </div>
 
-                                           
+                       <!-- USERS ONLINE SECTION -->
+						<h3>TEAM MEMBERS</h3>
+                      <!-- First Member -->
+                      <div class="desc">
+                      	<div class="thumb">
+                      		<img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+                      	</div>
+                      	<div class="details">
+                      		<p><a href="#">DIVYA MANIAN</a><br/>
+                      		   <muted>Available</muted>
+                      		</p>
+                      	</div>
+                      </div>
+                      <!-- Second Member -->
+                      <div class="desc">
+                      	<div class="thumb">
+                      		<img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
+                      	</div>
+                      	<div class="details">
+                      		<p><a href="#">DJ SHERMAN</a><br/>
+                      		   <muted>I am Busy</muted>
+                      		</p>
+                      	</div>
+                      </div>
+                      <!-- Third Member -->
+                      <div class="desc">
+                      	<div class="thumb">
+                      		<img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
+                      	</div>
+                      	<div class="details">
+                      		<p><a href="#">DAN ROGERS</a><br/>
+                      		   <muted>Available</muted>
+                      		</p>
+                      	</div>
+                      </div>
+                      <!-- Fourth Member -->
+                      <div class="desc">
+                      	<div class="thumb">
+                      		<img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
+                      	</div>
+                      	<div class="details">
+                      		<p><a href="#">Zac Sniders</a><br/>
+                      		   <muted>Available</muted>
+                      		</p>
+                      	</div>
+                      </div>
+                      <!-- Fifth Member -->
+                      <div class="desc">
+                      	<div class="thumb">
+                      		<img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
+                      	</div>
+                      	<div class="details">
+                      		<p><a href="#">Marcel Newman</a><br/>
+                      		   <muted>Available</muted>
+                      		</p>
+                      	</div>
+                      </div>
+
+                        <!-- CALENDAR-->
+                        <div id="calendar" class="mb">
+                            <div class="panel green-panel no-margin">
+                                <div class="panel-body">
+                                    <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+                                        <div class="arrow"></div>
+                                        <h3 class="popover-title" style="disadding: none;"></h3>
+                                        <div id="date-popover-content" class="popover-content"></div>
+                                    </div>
+                                    <div id="my-calendar"></div>
+                                </div>
+                            </div>
+                        </div><!-- / calendar -->
+                     
                   </div><!-- /col-lg-3 -->
               </div><!-- /row -->
           </section>

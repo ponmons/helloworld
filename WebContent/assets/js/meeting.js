@@ -29,7 +29,7 @@ function getData() {
 			url : "select.do",
 			type : "post",
 			dataType : "json", //결과데이터타입
-			success : function(data) {
+			success : function(data) {		//data는 파라미터로 값을 넣어 준다. 
 				var table = "";
 				//기존에 있는 테이블 첫행만 빼고 지우기
 				//http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_gt
@@ -49,32 +49,15 @@ function getData() {
 			error : function(err) {//실패했을때
 				alert(err + " : 모든 고객 정보보기 실패");
 			}
-		});//end of ajax
-	}//end of getData()
+	});//end of ajax
+}//end of getData()
 
 $(document).ready(function() {
-/*	$("#btn").click(function() {
-		sendRequest();
-	
-	});//end of 회비추가 팝업창 */
 
-	$('input:radio[name=optionsRadios]').change(function(){
-		if($('input:radio[name=optionsRadios]:checked').val() == 'option1'){
-			$("input:text[id=op1]").removeAttr("disabled", "disabled");
-			$("input:text[id=op2]").attr("disabled", "disabled");
-		}else{
-			$("input:text[id=op2]").removeAttr("disabled", "disabled");
-			$("input:text[id=op1]").attr("disabled", "disabled");
-		}
-	});
-	// 회비를 나누는 방식 한사람당 회비 , 사람 수
-	$("#op1").blur(function(){
-		$("input:text[id=op2]").val($("input:text[id=op1]").val()*4); 
-	});
-	$("#op2").blur(function(){
-		$("input:text[id=op1]").val($("input:text[id=op2]").val()/4); 
-	});
-	
+	$("div#topbar").load("jsp/topbar.jsp");
+	$("div#leftSideBar").load("jsp/leftSideBar.jsp");
+	$("div#addpay").load("jsp/addpay.jsp");
+	$("div#rightSideBar").load("jsp/rightSidebar.jsp");
 	
 	getData();
 });

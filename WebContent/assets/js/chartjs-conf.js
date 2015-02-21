@@ -46,15 +46,15 @@ var Script = function () {
     };
     var pieData = [
         {
-            value: 30,
+            value: 20,
             color:"#1abc9c"
         },
         {
-            value : 50,
+            value : 90,
             color : "#16a085"
         },
         {
-            value : 100,
+            value : 200,
             color : "#27ae60"
         }
 

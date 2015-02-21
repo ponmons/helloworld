@@ -1,20 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
+    
 		<!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="메뉴"></div>
               </div>
             <!--logo start-->
             <a href="index.html" class="logo"><b>N-BBANG</b></a>
@@ -166,5 +159,3 @@
             </div>
         </header>
       <!--header end-->
-</body>
-</html>

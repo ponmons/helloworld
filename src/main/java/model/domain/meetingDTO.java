@@ -1,6 +1,8 @@
 package model.domain;
 
-public class meetingDTO {
+import java.io.Serializable;
+
+public class meetingDTO implements Serializable {
 	private int meetno ;
 	private String meetname ;
 	private String place ;

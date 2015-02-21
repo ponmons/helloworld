@@ -1,6 +1,8 @@
 package model.domain;
 
-public class memberDTO {
+import java.io.Serializable;
+
+public class memberDTO implements Serializable{
 	private int memno;
 	private String memname;
 	private String mempw;

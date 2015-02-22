@@ -16,11 +16,17 @@
 										<h4>DJ SHERMAN</h4>
 									</div>
 								</div>
-								<div class="pr2-social centered">
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-								</div>
+								
+					<ul class="nav pull-right top-menu">
+                    <li><button class="logout" data-toggle="modal" data-target="#myModal" >
+						 회비추가
+						</button>
+					</ul>
+					<ul class="nav pull-left top-menu">
+                    <li><button class="logout" data-toggle="modal" data-target="#" >
+						 결제하기
+						</button>
+					</ul>
 							</div><!--/panel -->
                     <!--COMPLETED ACTIONS DONUTS CHART-->
 						<h3>NOTIFICATIONS</h3>

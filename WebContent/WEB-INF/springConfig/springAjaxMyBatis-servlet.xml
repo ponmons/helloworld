@@ -16,11 +16,10 @@
 	<!-- viewReslover 등록 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/" /> <!-- 폴더경로 -->
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/" /> <!-- 폴더경로 -->
 		<property name="suffix" value=".jsp" /><!-- 확장자 -->
 	</bean>
-
-
 
 	<!-- Json 응답을 위한 설정 -->
 	<bean id="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView" >
@@ -32,4 +31,5 @@
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
 		<property name="order" value="0" />
 	</bean>
+	
 </beans>

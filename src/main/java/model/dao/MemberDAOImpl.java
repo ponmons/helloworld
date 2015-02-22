@@ -31,9 +31,7 @@ public class MemberDAOImpl implements MemberDAO {
 		MemberDTO sVo = null;
 		try {
 			session = DBUtil.getSqlSession();
-			System.out.println(vo);
 			sVo = session.selectOne("member.memEmailCheck", vo);
-			System.out.println(sVo);
 		} finally {
 			DBUtil.closeSqlSession(session);
 		}

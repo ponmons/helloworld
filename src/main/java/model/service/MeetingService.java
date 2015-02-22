@@ -1,7 +1,8 @@
 package model.service;
 
+import model.domain.PayDTO;
+
 
 public interface MeetingService {
-	int insertPay(int price, int totalfee);
-	
+	int insertPay(PayDTO payDTO);
 }

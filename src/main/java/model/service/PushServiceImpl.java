@@ -19,8 +19,8 @@ public class PushServiceImpl implements PushService{
 		return pushDao.pushSelect();
 	}
 	@Override
-	public ArrayList<WebPushDTO> ResBeforeSelect(int ckNo) {
-		return pushDao.ResBeforeSelect(ckNo);
+	public ArrayList<WebPushDTO> ResBeforeSelect(int ckno) {
+		return pushDao.ResBeforeSelect(ckno);
 	}
 	@Override
 	public List<WebPushDTO> pushWebSelect(int ckNo) {

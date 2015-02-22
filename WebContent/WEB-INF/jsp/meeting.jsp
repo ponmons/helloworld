@@ -53,7 +53,7 @@
 	                  	  <div class="content-panel">
 	                  	  	  <h4><i class="fa fa-angle-right"></i>친구 리스트</h4>
 	                  	  	  <hr>
-		                <table id="listTable" class="table table-striped table-advance table-hover" >
+		                <table id="fblist" class="table table-striped table-advance table-hover" >
 	                  	  	 <thead>
                               <tr>
                                   <th><i class="fa fa-bullhorn"></i> 번호</th>
@@ -105,7 +105,6 @@
     <script src="assets/js/jquery-1.8.3.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
 
 
     <!--common script for all pages-->
@@ -115,7 +114,6 @@
     <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>   
 	 <script src="assets/js/chart-master/Chart.js"></script>
     <script src="assets/js/chartjs-conf.js"></script>	
 	<script src="assets/js/meeting.js"></script>

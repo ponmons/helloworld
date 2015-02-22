@@ -50,7 +50,11 @@ public class PayDTO implements Serializable{
 		this.deviceId=deviceId;
 	}
 
-
+	public PayDTO(int price2, int totalfee2, int meetno2) {
+		this.meetno = meetno2;
+		this.price = price2;
+		this.totalfee = totalfee2;
+	}
 
 
 	public String getDeviceId() {

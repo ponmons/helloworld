@@ -33,18 +33,18 @@ function getData() {
 				var table = "";
 				//기존에 있는 테이블 첫행만 빼고 지우기
 				//http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_gt
-				$("#listTable tr:gt(0)").remove();
+				$("#fblist tr:gt(0)").remove();
 
 				$(data.list).each(
 						function(index, item) {
-							table += "<tr><td><a href='basic_table.html#'>"+ item.memno + "</a></td>" +
+							table += "<tr><td><a href='profile.html#'>"+ item.memno + "</a></td>" +
 									"<td><a href='basic_table.html#'>"+ item.memname + "</a></td>" +
-									"<td>" + item.memid + "</td>";
+									"<td>" + item.email + "</td>";
 							table += "<td>" + item.account + "</td>" +
 									"<td>" + item.phonenumber + "</td></tr>";
 						});
 				//테이블에 추가
-				$("#listTable tr:eq(0)").after(table);
+				$("#fblist tr:eq(0)").after(table);
 			},
 			error : function(err) {//실패했을때
 				alert(err + " : 모든 고객 정보보기 실패");

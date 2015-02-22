@@ -12,6 +12,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <!-- 클래스들의 전체경로에 이름(별칭) 만들기 -->
    <typeAliases>
      <typeAlias type="model.domain.MemberDTO" alias="memDTO"/>
+     <typeAlias type="model.domain.PayDTO" alias="memVo"/>
+     <typeAlias type="model.domain.PushDTO" alias="pushVo"/>
+     <typeAlias type="model.domain.WebPushDTO" alias="webPushVo"/>
+     
    </typeAliases>
    
 	<environments default="development">
@@ -30,6 +34,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	
 	<mappers>
 		<mapper resource="conf/MemberMapper.xml"/>
+		<mapper resource="conf/PayMapper.xml"/>
+		<mapper resource="conf/PushMapper.xml"/>
+		<mapper resource="conf/WebPushMapper.xml"/>
 	</mappers>
 </configuration>
 

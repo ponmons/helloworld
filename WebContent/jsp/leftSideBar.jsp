@@ -10,7 +10,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
              
               	  <p class="centered"><a href="profile.html"><img src="assets/img/friends/fr-01.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">최성준</h5>
+              	  <h5 class="centered">${sessionScope.dto.memname }</h5>
               	
                   <li class="mt">
                       <a href="#" data-toggle="modal" data-target="#myModal">

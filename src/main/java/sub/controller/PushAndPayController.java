@@ -31,6 +31,7 @@ public class PushAndPayController {
 	private PushService pushService;
 	@Resource(name="payService")
 	private PayService payService;
+	
 	@RequestMapping("/pay.do")
 	@ResponseBody
 	public String paying(PayDTO vo){
@@ -58,17 +59,14 @@ public class PushAndPayController {
 				
 		return resultMsg;
 	}
-	@RequestMapping("/selectMessage.do")
+	@RequestMapping("/selectMessage.do" )
 	public ModelAndView selectMessage(HttpServletRequest req){
-		HttpSession session=req.getSession();
-		ArrayList<WebPushDTO> wpsBefore = pushService.ResBeforeSelect((int)session.getAttribute("memno"));// 2=로그인한 유저의 memno
-		ModelAndView mv = null;
-		mv=new ModelAndView();
-		mv.addObject("list", wpsBefore);			
-		mv.setViewName("jsonView");
-		
-		
-		return mv;
+		HttpSession session = req.getSession();
+		ModelAndView mv = new ModelAndView();
+		ArrayList<WebPushDTO> wpsBefore = pushService.ResBeforeSelect((int)((MemberDTO)session.getAttribute("dto")).getMemno());// 2=로그인한 유저의 memno
+			mv.addObject("list", wpsBefore);			
+			mv.setViewName("jsonView");
+			return mv;
 	}
 	
 	@RequestMapping("/selectDevice.do")

@@ -39,9 +39,8 @@ public class MemberController {
 	@RequestMapping(value="login.do", method=RequestMethod.POST)
 	public ModelAndView login(@RequestParam("email") String email, @RequestParam("mempw") String mempw,
 							 HttpServletRequest req){
-		ModelAndView mv=new ModelAndView("error");
+		ModelAndView mv=new ModelAndView();
 		HttpSession session=req.getSession();
-		try {
 			MemberDTO vo = memService.isIdValid(email, mempw);
 			if(vo != null){
 				session.setAttribute("dto", vo);
@@ -49,10 +48,6 @@ public class MemberController {
 				mv.setViewName("meeting");
 				return mv;
 			}
-		} catch (Exception e) {
-			session.setAttribute("error", "로그인 실패");
-			e.printStackTrace();
-		}
 			return mv;
 	}
 	

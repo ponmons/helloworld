@@ -65,23 +65,23 @@ create table member(
 	memname varchar2(20) not null,
 	mempw varchar2(20) not null,
 	cardpw varchar2(20),
-	email varchar2(20),
-	account varchar2(30),
+	email varchar2(20) unique not null,
+	account varchar2(30) unique,
 	phonenumber number(20),
-	deviceid varchar2(200),
+	deviceid varchar2(200) unique,
 	mempic varchar2(200)
 );
 
-insert into member values (MEMBER_SQ.NEXTVAL,'정수열','1','1','suyeol3@naver.com','1','01021067800','82cfe0b7-b9b8-11e4-86a9-06a6fa0000b9','2');
-insert into member values (MEMBER_SQ.NEXTVAL,'문석민','2','2','moon@naver.com','2','01021067800','0c1a29c6-ad44-11e4-9c06-06a6fa0000b9','3');
-insert into member values (MEMBER_SQ.NEXTVAL,'송지윤','3','3','moon@naver.com','3','01021067800','0c1a29c6-ad44-11e4-9c06-06a6fa0000b9','4');
+insert into member values (MEMBER_SQ.NEXTVAL,'정수열','1','1','suyeol3@naver.com','1','01024234','82cfe0b7-b9b8-11e4-86a9-06a6fa0000b9','2');
+insert into member values (MEMBER_SQ.NEXTVAL,'문석민','2','2','moon@naver.com','2','01010','0c1a29c6-ad44-11e4-9c06-06a6fa0000b9','3');
+insert into member values (MEMBER_SQ.NEXTVAL,'송지윤','3','3','song@naver.com','3','010232342','0c1a29c6-ader-11e4-9c06-06a6fa0000b9','4');
 
 
 create table meeting(
 	meeting_type number(3) not null,
 	meetno number(20) primary key,
 	meetname varchar2(20) not null,
-	place varchar2(20) not null,
+	place varchar2(20),
 	meetdate date,
 	totalfee number(30),
 	manageno number(20)
@@ -100,7 +100,7 @@ create table payment(
 	constraint payment_memno_fk foreign key(memno) references member(memno)
 );
 
-insert into payment values (PAYMENT_SQ.NEXTVAL,1,10000,1,4);
+insert into payment values (PAYMENT_SQ.NEXTVAL,1,10000,2,2);
 --insert into payment values (PAYMENT_SQ.NEXTVAL,1,20000,1,2);
 --insert into payment values (PAYMENT_SQ.NEXTVAL,1,330000,1,3);
 

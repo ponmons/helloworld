@@ -562,7 +562,7 @@
 						dataType : "json", //결과데이터타입
 						success : 
 							function(data) {
-							//alert("메시지 함수 들어옴");
+							alert("메시지 함수 들어옴");
 							$(data.list).each(
 									function(index, item) {
 										

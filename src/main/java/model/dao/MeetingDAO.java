@@ -1,5 +1,7 @@
 package model.dao;
 
+import model.domain.PayDTO;
+
 public interface MeetingDAO {
-	int insertPay(int price, int totalfee);
+	int insertPay(PayDTO payDTO);
 }

@@ -1,18 +1,9 @@
 package model.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
 
 import model.domain.PayDTO;
-import model.domain.PushDTO;
 import model.domain.WebPushDTO;
 
 import org.apache.ibatis.session.SqlSession;
@@ -23,17 +14,6 @@ import util.DBUtil;
 
 @Repository("payDao")
 public class PayDAOImpl implements PayDAO {
-	private static DataSource source = null;
-	
-    static{	
-		try{
-		    Context ctx = new InitialContext();			
-		    source = (DataSource)ctx.lookup("java:comp/env/jdbc/oracle");	
-		    System.out.println(source);
-		}catch(Exception e) {
-		    e.printStackTrace();
-		}			
-    }
 
 	@Override
 	public List<PayDTO> paySelect() {
@@ -71,7 +51,6 @@ public class PayDAOImpl implements PayDAO {
 			session = DBUtil.getSqlSession();
 			result = session.update("payment.payUpdate", vo);
 			flag = result > 0 ? true : false;
-
 		} finally {
 			DBUtil.closeSqlSession(flag, session);
 		}
@@ -93,7 +72,5 @@ public class PayDAOImpl implements PayDAO {
 		}
 		return result;
 	}
-	
-	
 	
 }

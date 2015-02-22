@@ -13,21 +13,12 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="form-panel">
-								<form class="form-horizontal style-form" method="get" id="fee">
+								<form method="get" id="fee">
 									<div class="form-group">
-										<label class="col-sm-2 col-sm-2 control-label">회비 방식</label>
 										<div class="col-sm-10">
-										
-											<div class="radio" align="justify">
-												<input type="radio" name="optionsRadios" id="optionsRadios1"	value="option1" checked>
-												 한 사람당 회비 : <input id="price" type="text" name="price" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'> 원
-											</div>
-											<div class="radio" align="justify">
-												<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-												 총 회비 : <input id="totalfee" type="text" name="totalfee"  onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' disabled>원
-											</div>
-											
-											<span class="help-block">한 사람당 회비 방식과 총 회비 방식</span>
+												<label> 한 사람당 회비 : <input id="price" type="text" name="price" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'> 원 </label>
+												<label> 총 회비 : <input id="totalfee" type="text" name="totalfee"  onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'>원</label>
+											<span class="help-block">주의!!! 결제를 위하여 정확한 회비를 입력하여 주세요 !!</span>
 										</div>
 									</div>
 								</form>
@@ -40,7 +31,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-					<button type="button" class="btn btn-primary" id="btn">추가</button>
+					<button type="submit" class="btn btn-primary" id="btn" data-dismiss="modal">추가</button>
 				</div>
 			</div>
 		</div>
@@ -48,16 +39,21 @@
 	<!-- 회비 추가 end -->
 	<script>
 	$(document).ready(function() {
-		// 회비를 나누는 방식 한사람당 회비 , 사람 수
-		$('input:radio[name=optionsRadios]').change(function(){
-			if($('input:radio[name=optionsRadios]:checked').val() == 'option1'){
-				$("input:text[id=price]").removeAttr("disabled", "disabled");
-				$("input:text[id=totalfee]").attr("disabled", "disabled");
-			}else{
-				$("input:text[id=totalfee]").removeAttr("disabled", "disabled");
-				$("input:text[id=price]").attr("disabled", "disabled");
-			}
-		});
+			//회비 값 체크 
+		    $('.modal-footer').submit(function(){
+		        var username = $('#price').val();
+		        var password = $('#totalfee').val();
+		        if(username == '') {
+		       		alert("프라이스 값을 입력하세");
+		            return false;
+		        }
+		        if(password == '') {
+		        	alert("토탈 값을 입력하세");      
+		            return false;
+		        }
+		    });
+		
+
 		//회비 나누고 총액 확인 로직
 		$("#price").blur(function(){
 			$("input:text[id=totalfee]").val($("input:text[id=price]").val()*4); 
@@ -68,9 +64,8 @@
 		
 		//추가하기
 		$("#btn").click(function() {
-			alert($("#fee").serialize());
 			$.ajax({
-				url : "insert.do",
+				url : "insertfee.do",
 				type : "get",
 				dataType : "text",
 				data : $("#fee").serialize(),
@@ -78,7 +73,7 @@
 					if (data == "ok") {
 						alert("추가 성공" +$("#fee").serialize());
 						$("input[type=text]").val(""); //text박스 모두 지우기
-						// 추가 하고 닫기 
+						// 추가 하고 닫기 로직 추가 
 					} else {
 						alert("추가 실패");
 					}

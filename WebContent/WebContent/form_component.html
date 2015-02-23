@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+	<!-- push -->
+	<link rel="shortcut icon" href="push/examples/resources/img/favbaas.ico">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="push/examples/resources/css/baas.io.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="push/baas.io.js"></script>
+	<script src="push/examples/push/app.js"></script>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap-daterangepicker/daterangepicker.css" />
+        
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="Test.jsp" class="logo"><b>DASHGUM FREE</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge bg-theme">4</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks-bar">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 4 pending tasks</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">DashGum Admin Panel</div>
+                                        <div class="percent">40%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Database Update</div>
+                                        <div class="percent">60%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Product Development</div>
+                                        <div class="percent">80%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Payments Sent</div>
+                                        <div class="percent">70%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <span class="sr-only">70% Complete (Important)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See All Tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- settings end -->
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#" id="btn">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">N</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">받은 메시지 목록</p>
+                            </li>
+                            
+                            <li id="listTable">
+                           
+                            </li>
+                            
+                            
+                            <li>
+                                <a href="index.html#">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Marcel Newman</h5>
+              	  	
+                  <li class="mt">
+                      <a href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>UI Elements</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">General</a></li>
+                          <li><a  href="buttons.html">Buttons</a></li>
+                          <li><a  href="panels.html">Panels</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Components</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="gallery.html">Gallery</a></li>
+                          <li><a  href="todo_list.html">Todo List</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>Extra Pages</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="blank.html">Blank Page</a></li>
+                          <li><a  href="login.html">Login</a></li>
+                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active" href="javascript:;" > <!--  -->
+                          <i class="fa fa-tasks"></i>
+                          <span>Forms</span>
+                      </a>
+                      <ul class="sub">
+                          <li class="active"><a  href="form_component.html">Form Components</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-th"></i>
+                          <span>Data Tables</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Charts</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+          	<h3><i class="fa fa-angle-right"></i> Form Components</h3>
+          	
+          	<!-- BASIC FORM ELELEMNTS -->
+          	<div class="row mt">
+          		<div class="col-lg-12">
+                  <div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Form Elements</h4>
+                     <form action="pay.do" id="pay" class="form-horizontal style-form" method="post">
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">돈 보낼 계좌</label>
+                              <div class="col-sm-10">
+                                  <input id="account" name="account" type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">은행</label>
+                              <div class="col-sm-10">
+                                  <input name="bank" type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">금액</label>
+                              <div class="col-sm-10">
+                                  <input id="price" name="price" type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">계좌 비밀번호</label>
+                              <div class="col-sm-10">
+                                  <input id="carPw" name="carPw" type="password" class="form-control round-form">
+                              </div>
+                          </div>
+                         <input type="submit" class="btn btn-theme" id="payButton">
+                      </form>
+                  </div>
+          		</div><!-- col-lg-12-->      	
+          	</div><!-- /row -->
+          	
+          	<!-- INLINE FORM ELELEMNTS -->
+          	<div class="row mt">
+          		<div class="col-lg-12">
+          			<div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Inline Form</h4>
+                      <form class="form-inline" role="form">
+                          <div class="form-group">
+                              <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                              <label class="sr-only" for="exampleInputPassword2">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                          </div>
+                          <button type="submit" class="btn btn-theme">Sign in</button>
+                      </form>
+          			</div><!-- /form-panel -->
+          		</div><!-- /col-lg-12 -->
+          	</div><!-- /row -->
+          	
+          	<!-- INPUT MESSAGES -->
+          	<div class="row mt">
+          		<div class="col-lg-12">
+          			<div class="form-panel">
+                  	        <!-- insert baas.io "id" or "username" -->
+					<input type="hidden" class="form-control __org_id" value="447fa554-aaeb-11e4-8f63-06fd000000c2" placeholder="baas.io ID or Name">
+				<!-- insert Application "id" or "username" -->
+				<input type="hidden" class="form-control __app_id" value="4b789e97-aaeb-11e4-8f63-06fd000000c2" placeholder="Application ID or Name">
+		
+
+			<div class="tab-content">
+				<div class="tab-pane active" id="Send">
+					
+					<h3><strong>메세지 보내기</strong></h3>
+
+					<form action="pushWebInsert.do" id="push"  method="post" role="form" id="webSendTable" class='__setting' style="margin-bottom:20px;">
+						
+						<!-- select target -->
+						<!-- target:user -> insert uuid -->
+						<!-- target:device -> insert device id -->
+						<!-- target:tag -> insert tag name -->
+							
+							<label style="margin:0 10px 0 0;">
+								<input class='radio-inline' type="radio" name="target" value="device" style="margin:-2px 5px;">device
+							</label>
+						<label style="margin:0 10px 0 0;">
+								<input type="text" id="deviceName" value="">
+								<input type="button" class="btn btn-theme" id="selectName" value="이름 검색">
+							</label>
+						<div class="form-group">
+							<!-- 'user id' or 'device id' or 'tag name' -->
+							<input type="text" id="uuid" name="uuid" class="form-control __target_id" placeholder="disabled">
+						</div>
+
+						<div class="form-group">
+							<!-- push send message -->
+							<label>message</label>
+							<textarea id="content" name="content" class="form-control __message" rows="3" placeholder="메세지 내용은 iOS 220Byte, Android 4000Byte 로 제한되어 발송됩니다."></textarea>
+						</div>
+
+					
+						<div class="form-group">	
+							<!-- push reserve -->
+							<label>reserve</label>
+							<input id="alramtime" name="alramtime" type="text" class="form-control __reserve" placeholder="YYYY/MM/DD HH:MI (EX : 2014/09/15 13:40)">
+						</div>
+
+						<!-- select platform -->
+						<label>platform</label>
+
+						<div class="form-group">
+							<label style="margin:0 10px 0 0;">
+								<input class='radio-inline' type="radio" name="platform" value="I" style="margin:-2px 5px;" checked>iOS
+							</label>
+							<label style="margin:0 10px 0 0;">
+								<input class='radio-inline' type="radio" name="platform" value="G" style="margin:-2px 5px;">Android
+							</label>
+						</div>
+
+						<!-- send button -->
+						<button id="resetDeviceId" type="reset" class="btn btn-theme dd"> 다시 쓰기 </button>
+						<button class="btn btn-theme __send"> 보내기 </button>
+						<input type="button" class="btn btn-theme" value="웹전송" id="sendMessage" >
+					</form>
+
+				</div>
+			</div>
+          			</div><!-- /form-panel -->
+          		</div><!-- /col-lg-12 -->
+          	</div><!-- /row -->
+          	
+          	<!-- INPUT MESSAGES -->
+          	<div class="row mt">
+          		<div class="col-lg-12">
+          			<div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Checkboxes, Radios & Selects</h4>
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    Option one is this and that&mdash;be sure to include why it's great
+						  </label>
+						</div>
+						
+						<div class="radio">
+						  <label>
+						    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						    Option one is this and that&mdash;be sure to include why it's great
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+						    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						    Option two can be something else and selecting it will deselect option one
+						  </label>
+						</div>
+						
+						<hr>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+						</label>
+						
+						<hr>
+						<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+						<br>
+						<select multiple class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>        		
+          			</div><!-- /form-panel -->
+          		</div><!-- /col-lg-12 -->
+          		
+          	<!-- CUSTOM TOGGLES -->
+          		<div class="col-lg-12">
+          			<div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Custom Toggles</h4>
+                          <div class="row mt">
+                              <div class="col-sm-6 text-center">
+                                  <input type="checkbox" checked="" data-toggle="switch" />
+                              </div>
+                              <div class="col-sm-6 text-center">
+                                  <input type="checkbox" data-toggle="switch" />
+                              </div>
+                          </div>
+                          <div class="row mt">
+                              <div class="col-sm-6 text-center">
+                                  <div class="switch switch-square"
+                                       data-on-label="<i class=' fa fa-check'></i>"
+                                       data-off-label="<i class='fa fa-times'></i>">
+                                      <input type="checkbox" />
+                                  </div>
+                              </div>
+                              <div class="col-sm-6 text-center">
+                                  <div class="switch switch-square"
+                                       data-on-label="<i class=' fa fa-check'></i>"
+                                       data-off-label="<i class='fa fa-times'></i>">
+                                      <input type="checkbox" checked="" />
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row mt">
+                              <div class="col-sm-6 text-center">
+                                  <input type="checkbox" disabled data-toggle="switch" />
+                              </div>
+                              <div class="col-sm-6 text-center">
+                                  <input type="checkbox" checked disabled data-toggle="switch" />
+                              </div>
+                          </div>
+          			</div>
+          		</div>
+          	</div><!-- /row -->
+          	
+          	
+		</section><! --/wrapper -->
+      </section><!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2014 - Alvarez.is
+              <a href="form_component.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<!--custom switch-->
+	<script src="assets/js/bootstrap-switch.js"></script>
+	
+	<!--custom tagsinput-->
+	<script src="assets/js/jquery.tagsinput.js"></script>
+	
+	<!--custom checkbox & radio-->
+	
+	<script type="text/javascript" src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/date.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+	
+	<script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+	
+	
+	<script src="assets/js/form-component.js"></script>    
+    <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+    
+    $(document)	.ready(function() {
+    	var table = "";
+    	var count = 0;
+    	$("#selectName").click(function() {
+    		$.ajax({
+				url : "selectDevice.do",
+				type : "post",
+				dataType : "text", //결과데이터타입
+				data : "vo=" + $("#deviceName").val(),
+				success : function(data) {
+							table += data+",";
+							count=count+1;
+					$("#uuid").val(table);
+					alert(count+"명 선택되었습니다.");
+				},
+				error : function(err) {//실패했을때
+					alert(err + " : 검색 실패");
+				}
+			}); 
+		})
+    	$("#resetDeviceId").click(function() {
+    		table="";
+    		count=0;
+    	})
+		
+    	$("#sendMessage").click(function() {
+				$.ajax({
+					url : "pushWebInsert.do",
+					type : "post",
+					dataType : "text",
+					data : $("#push").serialize(),
+					success : function(data) {
+						if (data == "ok") {
+							alert("전송 성공");
+						} else {
+							alert("전송 실패");
+						}
+					},
+					error : function(data) {
+						alert(data + ' : 전송 실행시 에러 발생');
+					}
+				}); 
+			})
+			$("#payButton").click(function() {
+				$.ajax({
+					url : "pay.do",
+					type : "post",
+					dataType : "text",
+					data : $("#pay").serialize(),
+					success : function(data) {
+						if (data == "ok") {
+							alert("결제 성공");
+						} else {
+							alert("결제 실패");
+						}
+					},
+					error : function(data) {
+						alert(data + ' : 결제 실행시 에러 발생');
+					}
+				}); 
+			})
+    });
+    
+    </script>
+    
+  <script>
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+  </script>
+
+  </body>
+</html>

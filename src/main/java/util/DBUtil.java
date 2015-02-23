@@ -35,7 +35,9 @@ public class DBUtil {
 	public static SqlSession getSqlSession() {
 		return factory.openSession();
 	}
-
+	public static SqlSession getSqlSession(boolean autoCommit) {
+		return factory.openSession(autoCommit);
+	}
 	public static void closeSqlSession(SqlSession session) {
 		if (session != null) {
 			session.close();

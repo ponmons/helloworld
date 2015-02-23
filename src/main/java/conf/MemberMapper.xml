@@ -4,18 +4,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="member">
-
 	<resultMap type="memDTO" id="memResultMap">
 		<result column="memno" property="memno" />
 		<result column="memname" property="memname" />
 		<result column="mempw" property="mempw" />
-		<result column="memid" property="memid" />
+		<result column="cardpw" property="cardpw" />
+		<result column="email" property="email" />
 		<result column="account" property="account" />
 		<result column="phonenumber" property="phonenumber" />
+		<result column="deviceid" property="deviceid" />
+		<result column="mempic" property="mempic" />
 	</resultMap>
 
 	<select id="memSelect" resultMap="memResultMap">
-		select * from member
+		select * from member 
 	</select>
-
+	<select id="memJoinCheck" parameterType="String" resultMap="memResultMap">
+		select * from member where email = #{email}
+	</select>
+	<select id="memEmailCheck" parameterType="memDTO" resultMap="memResultMap">
+		select * from member where email = #{email} and mempw = #{mempw} 
+	</select>
+	<insert id ="insertMember" parameterType = "memDTO">
+  		insert into member(memno, memname, mempw, email, deviceid, phonenumber) values(#{memno}, #{memname}, #{mempw}, #{email},#{deviceid}, #{phonenumber})
+  	</insert>
+  	
+  	<update id = "updatePhone" parameterType = "memDTO">
+  		update member set phonenumber=#{phonenumber} where email=#{email}
+  	</update>
 </mapper>

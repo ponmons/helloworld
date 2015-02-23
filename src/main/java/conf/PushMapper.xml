@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="notification">
+
+	<resultMap type="pushVo" id="pushResultMap">
+		<result column="notificationno" property="notificationno" />
+		<result column="content" property="content" />
+		<result column="alramtime" property="alramtime" />
+		<result column="ckNo" property="ckNo" />
+		<result column="meetno" property="meetno" />
+		<result column="memno" property="memno" />
+	</resultMap>
+
+	<select id="pushSelect" resultMap="pushResultMap" >
+		select * from notification
+	</select> 
+	
+	<insert id="pushInsert" parameterType="pushVo">
+		insert into notification(notificationno,content,alramtime,ckNo,meetno, memno)
+		values(NOTIFICATION_SQ.NEXTVAL,#{content},sysdate,#{ckNo}, #{meetno}, #{memno})
+	</insert>
+	<insert id="pushResInsert" parameterType="pushVo">
+		insert into notification(notificationno,content,alramtime,ckNo,meetno, memno)
+		values(NOTIFICATION_SQ.NEXTVAL,#{content},to_date(#{alramtime},'yyyy/mm/dd HH24:mi'),#{ckNo}, #{meetno}, #{memno})
+	</insert>
+</mapper>

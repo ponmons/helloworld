@@ -9,24 +9,23 @@
 					<h4 class="modal-title" id="myModalLabel">회비 추가</h4>
 				</div>
 				<div class="modal-body">
-					<!-- BASIC FORM ELELEMNTS -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="form-panel">
-								<form method="get" id="fee">
-									<div class="form-group">
-										<div class="col-sm-10">
-												<label> 한 사람당 회비 : <input id="price" type="text" name="price" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'> 원 </label>
-												<label> 총 회비 : <input id="totalfee" type="text" name="totalfee"  onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'>원</label>
-											<span class="help-block">주의!!! 결제를 위하여 정확한 회비를 입력하여 주세요 !!</span>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						<!-- col-lg-12-->
-					</div>
-					<!-- /row -->
+					<div class="row mt">
+          		<div class="col-lg-12">
+          			<div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> 회비를 입력해 주세요.</h4>
+                      <form class="form-inline" role="form" method="get" id="fee">
+                          <div class="form-group">
+                          	  <label> 한 사람당 회비 : <input id="price" type="text" name="price" class="form-control" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'> 원 </label>
+                          </div>
+                          <br><br>
+                          <div class="form-group">
+                              <label> 총 회비 : <input id="totalfee" type="text" name="totalfee" class="form-control" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'>원</label>
+                          </div>
+                      </form>
+          			</div><!-- /form-panel -->
+          		</div><!-- /col-lg-12 -->
+          	</div><!-- /row -->
+					
 
 				</div>
 				<div class="modal-footer">

@@ -10,7 +10,7 @@
     <meta name="keyword" content="alarm, credit, system, friends">
 
     <title>N-BBANG</title>
-
+	<link rel="shortcut icon" href="favicon.ico">
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
@@ -39,37 +39,11 @@
           <section class="wrapper">
                  
               <div class="col-lg-9">
-             	 <div class="row">
-                  	<ul class="nav pull-right top-menu">
-                    <li><button class="logout" data-toggle="modal" data-target="#myModal" >
-						 회비추가
-						</button>
-					</ul>
-					<div id=addpay></div>
-                  	</div>
-                  	<div class="row">
                   	
-                  	 <div class="col-md-12 mt">
-	                  	  <div class="content-panel">
-	                  	  	  <h4><i class="fa fa-angle-right"></i>친구 리스트</h4>
-	                  	  	  <hr>
-		                <table id="fblist" class="table table-striped table-advance table-hover" >
-	                  	  	 <thead>
-                              <tr>
-                                  <th><i class="fa fa-bullhorn"></i> 번호</th>
-                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> 이름</th>
-                                  <th><i class="fa fa-bookmark"></i> 가격</th>
-                                  <th><i class=" fa fa-edit"></i> 입금상태</th>
-                                  <th><i class=" fa fa-edit"></i> 삭제</th>
-                              </tr>
-                              </thead>
-                              <tbody >
-                          
-                              </tbody>
-                          </table>
-	                  	  </div><!--/content-panel -->
-                  		</div><!-- /col-md-12 -->
-                  			
+					<div id=addpay></div>
+                  	<div class="row mt">
+                 <div id="fblist"></div>
+                  	
                   	</div><!-- /row-->	
                   	<div class="row mt">
                   	<div class="tab-pane" id="chartjs">
@@ -92,7 +66,7 @@
       
       <!--footer start-->
       <footer class="site-footer">
-          <div class="text-center"> 2015 - NBBANG <a href="index.html#" class="go-top">
+          <div class="text-center"> 2015 - NBBANG <a href="login.do#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

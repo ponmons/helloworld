@@ -2,7 +2,6 @@ package model.dao;
 
 import java.util.List;
 
-
 import model.domain.PayDTO;
 import model.domain.WebPushDTO;
 
@@ -71,6 +70,19 @@ public class PayDAOImpl implements PayDAO {
 			DBUtil.closeSqlSession(flag, session);
 		}
 		return result;
+	}
+
+	@Override
+	public List<PayDTO> friendSelect(int meetno) {
+		SqlSession session = null;
+		List<PayDTO> list = null;
+		try {
+			session = DBUtil.getSqlSession();
+			list = session.selectList("payment.friendSelect", meetno);
+		} finally {
+			DBUtil.closeSqlSession(session);
+		}
+		return list;
 	}
 	
 }

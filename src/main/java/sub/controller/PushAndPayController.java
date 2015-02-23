@@ -55,10 +55,9 @@ public class PushAndPayController {
 			{
 				resultMsg = "ok";
 			}
-			
-				
 		return resultMsg;
 	}
+	
 	@RequestMapping("/selectMessage.do" )
 	public ModelAndView selectMessage(HttpServletRequest req){
 		HttpSession session = req.getSession();

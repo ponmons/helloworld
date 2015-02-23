@@ -3,69 +3,96 @@ package model.domain;
 import java.io.Serializable;
 
 public class MeetingDTO implements Serializable {
-	private int meetno ;
-	private String meetname ;
+	private int meetingType;
+	private int meetNo ;
+	private String meetName ;
 	private String place ;
-	private int meetdate ;
+	private String meetDate ;
 	private int totalfee ;
-	private int manageno ;
+	private int manageNo ;
 	
 	public MeetingDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public MeetingDTO(int meetno, String meetname, String place, int meetdate,
-			int totalfee, int manageno) {
+
+	public MeetingDTO(int meetingType, int meetNo, String meetName,
+			String place, String meetDate, int totalfee, int manageNo) {
 		super();
-		this.meetno = meetno;
-		this.meetname = meetname;
+		this.meetingType = meetingType;
+		this.meetNo = meetNo;
+		this.meetName = meetName;
 		this.place = place;
-		this.meetdate = meetdate;
+		this.meetDate = meetDate;
 		this.totalfee = totalfee;
-		this.manageno = manageno;
+		this.manageNo = manageNo;
 	}
-	public int getMeetno() {
-		return meetno;
+
+	public MeetingDTO(int parseInt, String string, String spendLocation,
+			String spendDate, String spendMemo, int count2, int intValue, int i) {
 	}
-	public void setMeetno(int meetno) {
-		this.meetno = meetno;
+
+	public int getMeetingType() {
+		return meetingType;
 	}
-	public String getMeetname() {
-		return meetname;
+
+	public void setMeetingType(int meetingType) {
+		this.meetingType = meetingType;
 	}
-	public void setMeetname(String meetname) {
-		this.meetname = meetname;
+
+	public int getMeetNo() {
+		return meetNo;
 	}
+
+	public void setMeetNo(int meetNo) {
+		this.meetNo = meetNo;
+	}
+
+	public String getMeetName() {
+		return meetName;
+	}
+
+	public void setMeetName(String meetName) {
+		this.meetName = meetName;
+	}
+
 	public String getPlace() {
 		return place;
 	}
+
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public int getMeetdate() {
-		return meetdate;
+
+	public String getMeetDate() {
+		return meetDate;
 	}
-	public void setMeetdate(int meetdate) {
-		this.meetdate = meetdate;
+
+	public void setMeetDate(String meetDate) {
+		this.meetDate = meetDate;
 	}
+
 	public int getTotalfee() {
 		return totalfee;
 	}
+
 	public void setTotalfee(int totalfee) {
 		this.totalfee = totalfee;
 	}
-	public int getManageno() {
-		return manageno;
+
+	public int getManageNo() {
+		return manageNo;
 	}
-	public void setManageno(int manageno) {
-		this.manageno = manageno;
+
+	public void setManageNo(int manageNo) {
+		this.manageNo = manageNo;
 	}
+
 	@Override
 	public String toString() {
-		return "meetingDTO [meetno=" + meetno + ", meetname=" + meetname
-				+ ", place=" + place + ", meetdate=" + meetdate + ", totalfee="
-				+ totalfee + ", manageno=" + manageno + "]";
+		return "MeetingDTO [meetingType=" + meetingType + ", meetNo=" + meetNo
+				+ ", meetName=" + meetName + ", place=" + place + ", meetDate="
+				+ meetDate + ", totalfee=" + totalfee + ", manageNo="
+				+ manageNo + "]";
 	}
-	
-	
+
 }

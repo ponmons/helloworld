@@ -9,6 +9,7 @@ public class PayDTO implements Serializable{
 	String account;
 	String phoneNumber;
 	String carPw;
+	String memPic;
 	int payCheck;
 	int price;
 	int memno;
@@ -17,7 +18,6 @@ public class PayDTO implements Serializable{
 	String deviceId;
 	
 	public PayDTO() {}
-
 
 	public PayDTO(int memno) {
 		super();
@@ -30,7 +30,11 @@ public class PayDTO implements Serializable{
 		this.memno = memno;
 		this.meetno = meetno;
 	}
-
+	public PayDTO(int price2, int totalfee2, int meetno2) {
+		this.meetno = meetno2;
+		this.price = price2;
+		this.totalfee = totalfee2;
+	}
 
 	public PayDTO(String memName, String memPw, String email, String account,
 			String phoneNumber, String carPw, int payCheck, int price,
@@ -50,11 +54,7 @@ public class PayDTO implements Serializable{
 		this.deviceId=deviceId;
 	}
 
-	public PayDTO(int price2, int totalfee2, int meetno2) {
-		this.meetno = meetno2;
-		this.price = price2;
-		this.totalfee = totalfee2;
-	}
+	
 
 
 	public String getDeviceId() {
@@ -112,7 +112,6 @@ public class PayDTO implements Serializable{
 	public String getMemPw() {
 		return memPw;
 	}
-
 
 	public void setMemPw(String memPw) {
 		this.memPw = memPw;
@@ -207,7 +206,6 @@ public class PayDTO implements Serializable{
 	public void setMeetno(int meetno) {
 		this.meetno = meetno;
 	}
-
 
 	
 }

@@ -23,7 +23,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="paySelect" resultMap="payResultMap">
 		select * from pay_info
 	</select>
-
+	
+	<select id="friendSelect" resultMap="payResultMap" parameterType="int">
+		select * from pay_info where meetno = #{meetno}
+	</select>
+	
 	<update id="payUpdate" parameterType="memVo">
 		update payment
 		set PRICE = #{price}

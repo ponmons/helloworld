@@ -26,25 +26,39 @@ function sendRequest() {
 
 function getData() {
 	$.ajax({
-			url : "select.do",
+			url : "friendSelect.do",
 			type : "post",
 			dataType : "json", //결과데이터타입
+			data : "meetno="+2,
 			success : function(data) {		//data는 파라미터로 값을 넣어 준다. 
-				var table = "";
+				var table = '';
 				//기존에 있는 테이블 첫행만 빼고 지우기
 				//http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_gt
-				$("#fblist tr:gt(0)").remove();
 
 				$(data.list).each(
 						function(index, item) {
-							table += "<tr><td><a href='profile.html#'>"+ item.memno + "</a></td>" +
-									"<td><a href='basic_table.html#'>"+ item.memname + "</a></td>" +
-									"<td>" + item.email + "</td>";
-							table += "<td>" + item.account + "</td>" +
-									"<td>" + item.phonenumber + "</td></tr>";
+							table += '<div class="col-md-4 mb">'+
+								'<div class="darkblue-panel pn">'+
+							'<div class="darkblue-header">'+
+								'<h5>'+item.memno+'</h5>'+
+							'</div>'+
+							'<p><img src="assets/img/friends/fr-03.jpg" class="img-circle" width="80"></p>'+
+							'<p><h5>'+item.memName+'</h5></p>'+
+							'<div class="row">'+
+								'<div class="col-md-6">'+
+									'<i class="small mt">MEMBER SINCE</i>'+
+									'<p>2012</p>'+
+								'</div>'+
+								'<div class="col-md-6">'+
+									'<i class="small mt">PRICE</i>'+
+									'<p>￦'+item.price+'</p>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</div><!-- /col-md-4 -->';
 						});
 				//테이블에 추가
-				$("#fblist tr:eq(0)").after(table);
+				$("#fblist").after(table);
 			},
 			error : function(err) {//실패했을때
 				alert(err + " : 모든 고객 정보보기 실패");

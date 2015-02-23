@@ -1078,23 +1078,23 @@ PANELS CONFIGURATIONS
 /*White Panel */
 .white-panel {
 	text-align: center;
-	background: #ffffff;
+	background: #CCFF99;
 	color: #ccd1d9;
 }
 
 .white-panel p {
 	margin-top: 5px;
 	font-weight: 700;
-	margin-left: 15px;
+	margin-left: 17px;
 }
 .white-panel .white-header {
-	background: #f4f4f4;
-	padding: 3px;
+	background: #ffcf00;
+	padding: 4px;
 	margin-bottom: 15px;
-	color: #c6c6c6;
+	color: #ccd1d9;
 }
 .white-panel .small {
-	font-size: 10px;
+	font-size: 11px;
 	color: #ccd1d9;
 }
 

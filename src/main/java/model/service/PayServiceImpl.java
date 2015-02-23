@@ -1,13 +1,11 @@
 package model.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
 
 import model.dao.PayDAO;
 import model.domain.PayDTO;
-import model.domain.PushDTO;
 import model.domain.WebPushDTO;
 
 import org.springframework.stereotype.Service;
@@ -38,6 +36,11 @@ public class PayServiceImpl implements PayService {
 	@Override
 	public int payMeetUpdate(PayDTO vo) {
 		return payDao.payMeetUpdate(vo);
+	}
+
+	@Override
+	public List<PayDTO> friendSelect(int meetno) {
+		return payDao.friendSelect(meetno);
 	}
 	
 }

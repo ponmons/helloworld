@@ -18,12 +18,12 @@
 								</div>
 								
 					<ul class="nav pull-right top-menu">
-                    <li><button class="logout" data-toggle="modal" data-target="#myModal" >
+                    <li><button class="btn btn-warning" data-toggle="modal" data-target="#myModal" >
 						 회비추가
 						</button>
 					</ul>
 					<ul class="nav pull-left top-menu">
-                    <li><button class="logout" data-toggle="modal" data-target="#" >
+                    <li><button class="btn btn-warning" data-toggle="modal" data-target="#" >
 						 결제하기
 						</button>
 					</ul>

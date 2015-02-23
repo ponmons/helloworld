@@ -179,6 +179,6 @@ button:active {
 }
 
 .connect a.facebook { background: url(../img/facebook.png) center center no-repeat; }
-.connect a.twitter { background: url(../img/twitter.png) center center no-repeat; }
+.connect a.kakaotalk { background: url(../img/kakaotalk.png) center center no-repeat; }
 
 .connect a:hover { background-position: center bottom; }

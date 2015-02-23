@@ -2,7 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="ChoiSeongJun">
@@ -26,8 +25,8 @@
   <body>
 
   <section id="container" >
-      <div id="topbar"></div>
-    <div id="leftSideBar"></div>
+      	<div id="topbar"></div>
+    	<div id="leftSideBar"></div>
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -40,30 +39,28 @@
           		<div class="col-lg-12">
                   <div class="form-panel">
                   	  <h4 class="mb"><i class="fa fa-angle-right"></i></h4>
-                      <form class="form-horizontal style-form" action="addSpend.do" method="post">
+                      <form class="form-horizontal style-form" action="addMeeting.do" method="post">
                               <div>
                               	<div>
-									<tr>
-									<label class="col-sm-2 col-sm-2 control-label">유형</label><br/><br/><select class="form-control" name="spendCategory" id="spendCategory">
-										<option value="2">1</option>
-										<option value="3">2</option>
+									<label class="col-sm-2 col-sm-2 control-label">유형</label>
+									<select class="form-control" name="meetingType" id="meetingType">
+										<option value="2">행사</option>
+										<option value="3">회식</option>
 									</select>
-									<br/><br/>
-									</tr>
 								</div>
-                              <label class="col-sm-2 col-sm-2 control-label">w</label>
+                              <label class="col-sm-2 col-sm-2 control-label">모임명</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="spendMemo" id="spendMemo"><br/><br/>
+                                  <input type="text" class="form-control" name="meetName" id="meetName" placeholder="모임명이 무엇인가요."><br/><br/>
                               </div>
                               
-                              <label class="col-sm-2 col-sm-2 control-label">t</label>
+                              <label class="col-sm-2 col-sm-2 control-label">장소</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="spendLocation" id="spendLocation"><br/><br/>
+                                  <input type="text" class="form-control" name="place" id="place" placeholder="장소를 작성해 주세요."><br/><br/>
                               </div>
                               
-                              <label class="col-sm-2 col-sm-2 control-label">k</label>
+                              <label class="col-sm-2 col-sm-2 control-label">날짜</label>
                               <div class="col-sm-10">
-                                  <input type="date" class="form-control" name="spendDate" id="spendDate"><br/><br/>
+                                  <input type="date" class="form-control" name="meetDate" id="meetDate" placeholder="날짜를 선택해 주세요."><br/><br/>
                               </div>
 									<center>
 										<button type="submit" class="btn btn-info" name="command" value="addSpend">추가</button>
@@ -84,7 +81,7 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-1.8.3.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
 
 
     <!--common script for all pages-->

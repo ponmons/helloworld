@@ -31,11 +31,7 @@ public class PushServiceImpl implements PushService{
 		return pushDao.pushInsert(vo);
 	}
 	@Override
-	public int pushContentUpdate(PushDTO vo) {
-		return pushDao.pushContentUpdate(vo);
-	}
-	@Override
-	public int pushResContentUpdate(PushDTO vo) {
-		return pushDao.pushResContentUpdate(vo);
+	public int pushResInsert(PushDTO vo) {
+		return pushDao.pushResInsert(vo);
 	}
 }

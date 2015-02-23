@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="payment">
 
-	<resultMap type="memVo" id="payResultMap">
+	<resultMap type="payVo" id="payResultMap">
 		<result column="MEMNAME" property="memName" />
 		<result column="MEMPW" property="memPw" />
 		<result column="EMAIL" property="email" />
@@ -16,6 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="PRICE" property="price" />
 		<result column="MEMNO" property="memno" />
 		<result column="TOTALFEE" property="totalfee" />
+		<result column="MEETING_TYPE" property="meetingType" />
 		<result column="MEETNO" property="meetno" />
 		<result column="deviceId" property="deviceId" />
 	</resultMap>
@@ -24,32 +25,47 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from pay_info
 	</select>
 	
+	<!-- 모임에서 친구 목록 가져오기 -->
 	<select id="friendSelect" resultMap="payResultMap" parameterType="int">
 		select * from pay_info where meetno = #{meetno}
 	</select>
 	
-	<update id="payUpdate" parameterType="memVo">
-		update payment
-		set PRICE = #{price}
-		where MEMNO = #{memno}
-	</update>
-	
-	<update id="payMeetUpdate" parameterType="memVo">
+	<!-- 결제했을 때 총액 업데이트  -->
+	<update id="payMeetUpdate" parameterType="payVo">
 		update meeting
 		set TOTALFEE = #{totalfee}
 		where MEETNO = (select MEETNO from payment where MEMNO = #{memno})
 	</update>
 	
-	<update id="priceUpdate" parameterType="memVo">
+	<!--  결제 했을 때 자신의 금액 업데이트 -->
+	<update id="payUpdate" parameterType="payVo">
+		update payment
+		set PRICE = #{price}
+		where MEMNO = #{memno}
+	</update>
+	
+	<!-- 모임에 있는 멤버들 회비 정해주기 -->
+	<update id="priceUpdate" parameterType="payVo">
 		update payment set price = #{price} 
 		where memno in (select memno 
 								 from payment
 								 where meetno = #{meetno})
 	</update>
 	
-	<update id="totalfeeUpdate" parameterType="memVo">
+	<!-- 총회비 저장 -->
+	<update id="totalfeeUpdate" parameterType="payVo">
 		update meeting set totalfee = #{totalfee} 
 		where meetno = #{meetno}
 	</update>
-
+	
+	<!-- 멤버에 있는 모임들 불러오기  -->
+	<select id="meetingList" parameterType="int" resultMap="payResultMap">
+		SELECT * FROM pay_info where memno=#{memno}
+	</select>
+	
+	<!-- 모임 삭제 -->
+	<delete id="deleteMeeting" parameterType="payVo">
+		delete from meeting where meetno = #{meetno} and manageno=#{memno}
+	</delete>
+	
 </mapper>

@@ -11,6 +11,5 @@ public interface PushService {
 	List<PushDTO> pushSelect();
 	List<WebPushDTO> pushWebSelect(int ckNo);
 	ArrayList<WebPushDTO> ResBeforeSelect(int ckno);
-	int pushContentUpdate(PushDTO vo);
-	int pushResContentUpdate(PushDTO vo);
+	int pushResInsert(PushDTO vo);
 }

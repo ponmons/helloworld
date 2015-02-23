@@ -22,15 +22,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into notification(notificationno,content,alramtime,ckNo,meetno, memno)
 		values(NOTIFICATION_SQ.NEXTVAL,#{content},sysdate,#{ckNo}, #{meetno}, #{memno})
 	</insert>
-	
-	<update id="pushContentUpdate" parameterType="pushVo">
-		update notification
-		set content=#{content}, alramtime=sysdate
-		where ckNo = #{ckNo} and notificationno=#{notificationno}
-	</update>
-	<update id="pushResContentUpdate" parameterType="pushVo">
-		update notification
-		set content=#{content}, alramtime=to_date(#{alramtime},'yyyy/mm/dd HH24:mi')
-		where ckNo = #{ckNo} and notificationno=#{notificationno}
-	</update>
+	<insert id="pushResInsert" parameterType="pushVo">
+		insert into notification(notificationno,content,alramtime,ckNo,meetno, memno)
+		values(NOTIFICATION_SQ.NEXTVAL,#{content},to_date(#{alramtime},'yyyy/mm/dd HH24:mi'),#{ckNo}, #{meetno}, #{memno})
+	</insert>
 </mapper>

@@ -66,27 +66,14 @@ public class PushDAOImpl implements PushDAO {
 		}
 		return result;
 	}
-	public int pushResContentUpdate(PushDTO vo) {
+	@Override
+	public int pushResInsert(PushDTO vo) {
 		SqlSession session = null;
 		boolean flag = false;
 		int result = 0;
 		try {
 			session = DBUtil.getSqlSession();
-			result = session.update("notification.pushResContentUpdate", vo);
-			flag = result > 0 ? true : false;
-	
-		} finally {
-			DBUtil.closeSqlSession(flag, session);
-		}
-		return result;
-	}
-	public int pushContentUpdate(PushDTO vo) {
-		SqlSession session = null;
-		boolean flag = false;
-		int result = 0;
-		try {
-			session = DBUtil.getSqlSession();
-			result = session.update("notification.pushContentUpdate", vo);
+			result = session.update("notification.pushResInsert", vo);
 			flag = result > 0 ? true : false;
 	
 		} finally {

@@ -8,9 +8,7 @@ import model.domain.PayDTO;
 public interface MeetingDAO {
 	int insertPay(PayDTO payDTO);
 
-	MeetingDTO selectMeetNo(String id);
-
 	int insertMeeting(MeetingDTO meetingDTO);
 
-	List<MeetingDTO> selectAll(String id);
+	List<PayDTO> meetingList(int memno);
 }

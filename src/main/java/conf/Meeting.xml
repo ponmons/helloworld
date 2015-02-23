@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MEETING">
+	<resultMap type="meetingDTO" id="meetingResultMap">
+		<result property="meetingType" column="MEETING_TYPE" />
+		<result property="meetNo" column="MEETNO" />
+		<result property="meetName" column="MEETNAME" />
+		<result property="place" column="PLACE" />
+		<result property="meetDate" column="MEETDATE" />
+		<result property="totalfee" column="TOTALFEE" />
+		<result property="manageNo" column="MANAGENO" />
+	</resultMap>
+
+	<!-- 모임 등록 -->
+	<insert id="insertMeeting" parameterType="meetingDTO">
+		INSERT INTO meeting(meetno, meeting_type, meetname, place, meetdate, manageno) VALUES(MEETING_SQ.NEXTVAL, #{meetingType}, #{meetName}, #{place}, #{meetDate}, #{manageNo})
+	</insert>
+	
+</mapper>

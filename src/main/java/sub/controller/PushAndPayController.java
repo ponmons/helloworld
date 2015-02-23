@@ -67,7 +67,6 @@ public class PushAndPayController {
 			mv.setViewName("jsonView");
 			return mv;
 	}
-	
 	@RequestMapping("/selectDevice.do")
 	@ResponseBody
 	public String select(String vo,HttpServletRequest req){
@@ -75,10 +74,7 @@ public class PushAndPayController {
 		String result="";
 		
 		List<MemberDTO> memberInfo =  memService.memberSelect();
-		PushDTO pushDto =  new PushDTO("보내는 메시지",(int)session.getAttribute("memno"),1);
-		//pushDto.setContent("보내는 메시지");
-//		pushDto.setMemno(session.getAttribute("memno"));// 1=로그인한 유저의 memno
-	//	pushDto.setMeetno(1);// 1=로그인한 유저의 meetno
+		System.out.println((int)((MemberDTO)session.getAttribute("dto")).getMemno());
 		System.out.println(vo);
 		for(int i=0;i<memberInfo.size();i++)
 		{
@@ -86,10 +82,7 @@ public class PushAndPayController {
 				{
 					System.out.println(vo);
 					result=memberInfo.get(i).getDeviceid();
-					pushDto.setCkNo(memberInfo.get(i).getMemno()); //푸시를 받는 유저의 memno
 					session.setAttribute("receivedMemno", memberInfo.get(i).getMemno());
-					System.out.println(pushDto);
-					pushService.pushInsert(pushDto);
 					
 				}
 		}
@@ -102,29 +95,20 @@ public class PushAndPayController {
 		String resultMsg = "no";
 		int result=0;
 		PushDTO dto = new PushDTO();
-		List<PushDTO> list2=pushService.pushSelect();
-		System.out.println((int)session.getAttribute("receivedMemno"));
-		for(int i=0;i<list2.size();i++)
-		{
-			if(list2.get(i).getCkNo()==(int)session.getAttribute("receivedMemno")) //2->로그인한 유저의 memno
-			{
-				dto.setCkNo((int)session.getAttribute("receivedMemno"));//상대방의 memno
-				dto.setNotificationno(list2.size());
+		dto.setCkNo((int)session.getAttribute("receivedMemno"));//상대방의 memno
+		dto.setMemno((int)((MemberDTO)session.getAttribute("dto")).getMemno());
+		dto.setMeetno(1);
 				dto.setContent(vo.getContent()); //보내는 메시지
-				
 				if(vo.getAlramtime().equals("")) //db에 보내는 메시지 저장
 				{
-					result =pushService.pushContentUpdate(dto);
-					
+					result =pushService.pushInsert(dto);
 				}
 				else
 				{
 					dto.setAlramtime(vo.getAlramtime());
-					result =pushService.pushResContentUpdate(dto);
-					System.out.println(dto);
+					result =pushService.pushResInsert(dto);
 				}
-			}
-		}
+		
 		if(result > 0 )  {
 			resultMsg = "ok";
 		}
